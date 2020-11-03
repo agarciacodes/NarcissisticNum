@@ -1,0 +1,13 @@
+def narcissistic(num):
+    if num < 0:
+        return "Invalid input, must be non-negative. Please try again"
+    else:
+        numstr = str(num)
+        pwr = len(numstr) #converting num to a str will help get the len (number of digits)
+        total = 0 #will be adding digits/powers to this variable
+        for i in numstr:
+            total += pow(int(i),pwr) #convert i to an integer bc its still a string
+        if total == num: #make sure to keep outside of loop so "total" can have the correct total
+            return True
+        else:
+            return False #True and False have to be capitalized
